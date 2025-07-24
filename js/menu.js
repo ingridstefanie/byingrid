@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Alternar visibilidade do menu
   function toggleMenu() {
-    const isActive = mobileMenu.classList.contains('active');
-    mobileMenu.classList.toggle('active');
-    toggleIcon(!isActive);
-  }
+  const isActive = mobileMenu.classList.contains('active');
+  mobileMenu.classList.toggle('active');
+  toggleButton.classList.toggle('open'); // Adiciona a classe .open
+  toggleIcon(!isActive);
+}
 
   // Fecha o menu ao clicar fora
   function handleClickOutside(event) {
@@ -49,3 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleButton.addEventListener('click', toggleMenu);
   document.addEventListener('click', handleClickOutside);
 });
+
