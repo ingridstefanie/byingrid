@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="description" content="Portfólio de Ingrid Stefanie Teixeira com projetos de SEO, Data Science e Copywriting.">
     <title>Meu Portfólio</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
@@ -12,7 +13,6 @@
       <div class="container">
         <div class="branding">
           <h1><a href="index.html">Ingrid Stefanie</a></h1>
-          <p>SEO | Data Science | Copywriting</p>
         </div>
         
         <!-- Bloco que agrupa ícones e botão lado a lado -->
@@ -50,8 +50,8 @@
 
           <nav class="mobile-menu">
             <a href="index.html">Início</a>
-            <a href="seo.html">Projetos SEO</a>
-            <a href="dados.html">Projetos Data Science</a>
+            <a href="projetos-seo.html">Projetos SEO</a>
+            <a href="projetos-dados-cards.html">Projetos Data Science</a>
             <a href="sobre.html">Sobre</a>
             <a href="cv.html">Currículo</a>
           </nav>
@@ -63,82 +63,44 @@
   <main class="main-container">
   <section id="temas">
     <div class="temas-grid">
+      
       <a href="sobre.html" class="tema-card img-cover"
-        style="background-image: url('./assets/img/ingrid.jpg');">
+         aria-label="Sobre mim - saiba mais"
+         style="background-image: url('./assets/img/ingrid.jpg');">
         <h3>Sobre mim</h3>
       </a>
-      <a href="seo.html" class="tema-card img-cover"
-        style="background-image: url('./assets/img/laptop.jpg');">
+      
+      <a href="projetos-seo.html" class="tema-card img-cover"
+         aria-label="Projetos de SEO"
+         style="background-image: url('./assets/img/pexels-kindelmedia-7688100.jpg');">
         <h3>SEO</h3>
-        <span class="creditos">Photo by Pixabay on Pexels</span>
+        <span class="creditos">Photo by Kindel Media on Pexels</span>
       </a>
-      <a href="dados.html" class="tema-card img-cover"
-        style="background-image: url('./assets/img/analisando-dados.jpg');">
+      
+      <a href="projetos-dados-cards.html" class="tema-card img-cover"
+         aria-label="Projetos de Data Science - Ciência de Dados"
+         style="background-image: url('./assets/img/pexels-ivan-samkov-4458195.jpg');">
         <h3>Data Science</h3>
-        <span class="creditos">Photo by ThisIsEngineering on Pexels</span>
+        <span class="creditos">Photo by Ivan Samkov on Pexels</span>
       </a>
+      
       <a href="cv.html" class="tema-card img-cover"
-        style="background-image: url('./assets/img/CV.png');">
+         style="background-image: url('./assets/img/CV.png');"
+         aria-label="Currículo - meu CV completo">
+        <h3 class="sr-only">Currículo</h3>
       </a>
+
     </div>
   </section>
 </main>
 
-
-    <footer id="contato">
+    <footer id="contato" role="contentinfo">
       <p>© 2025 - Todos os direitos reservados</p>
       <p><small>Ícones por <a href="https://icons8.com" target="_blank" rel="noopener">Icons8</a></small></p>
     </footer>
 
-    <!-- SCRIPT DO MENU -->
-<script>
-  const toggleButton = document.querySelector('.menu-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const menuLinks = document.querySelectorAll('.mobile-menu a');
-
-  const isMobile = () => window.innerWidth <= 768;
-
-  function enableHoverMenu() {
-    toggleButton.addEventListener('mouseenter', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    toggleButton.addEventListener('mouseleave', () => {
-      mobileMenu.classList.remove('active');
-    });
-
-    mobileMenu.addEventListener('mouseenter', () => {
-      mobileMenu.classList.add('active');
-    });
-
-    mobileMenu.addEventListener('mouseleave', () => {
-      mobileMenu.classList.remove('active');
-    });
-  }
-
-  function enableClickMenu() {
-    toggleButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('active');
-    });
-
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-      });
-    });
-  }
-
-  if (isMobile()) {
-    enableClickMenu();
-  } else {
-    enableHoverMenu();
-  }
-
-  window.addEventListener('resize', () => {
-    
-  });
-  </script>
   <!-- SCRIPT DO MENU -->
     <script src="js/menu.js"></script>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
   </body>
 </html>
