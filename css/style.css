@@ -549,27 +549,50 @@ footer,
 
 /* 1️⃣ Ajustes responsivos para telas até 768px */
 @media (max-width: 768px) {
+
   /* Grid dos temas */
   .temas-grid {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
 
-/* Logo no desktop */
+  /* Header mobile */
+  .header {
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, ícones à direita */
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .branding {
+    order: 1; /* garante que fique à esquerda */
+    flex-shrink: 0;
+  }
+
+  .social-icons {  /* use apenas esta classe */
+    display: flex;
+    gap: 0.3rem; /* aproxima os ícones */
+    order: 2;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    order: 3; /* botão de menu, se existir */
+  }
+}
+
+/* Logo global, válido para desktop e mobile se quiser */
 .site-title {
   font-family: 'DM Serif Display', serif;
   font-weight: 350; /* mais leve */
-  font-size: 1.8rem; /* maior que os ícones */
+  font-size: 1.5rem; 
   line-height: 1.0;
 }
 
-  /* Ícones de redes próximos e alinhados à direita */
-  .social-links {
-    display: flex;
-    justify-content: flex-end; /* mantém à direita */
-    
-  }
-}
 
 /* 2️⃣ Ajuste de espaçamento entre header e primeiro card */
 .hero + main {
