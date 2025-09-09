@@ -477,7 +477,7 @@ article h2:first-of-type {
   z-index: 2;
   font-size: 2.2rem;
   font-family: 'DM Serif Display', serif;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 .tema-card.img-cover p {
@@ -556,17 +556,19 @@ footer,
   }
 
 /* Logo no desktop */
-.branding .site-title {
+.site-title {
   font-family: 'DM Serif Display', serif;
   font-weight: 350; /* mais leve */
-  font-size: 2.4rem; /* maior que os ícones */
-  line-height: 1.2;
+  font-size: 1.8rem; /* maior que os ícones */
+  line-height: 1.0;
+  padding-left: 1.5rem;
 }
 
   /* Ícones de redes próximos e alinhados à direita */
   .social-links {
     display: flex;
     justify-content: flex-end; /* mantém à direita */
+    padding: 1rem;
     
   }
 }
