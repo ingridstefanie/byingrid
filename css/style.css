@@ -555,7 +555,13 @@ footer,
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
-
+  
+  .hero .container {
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, ícones à direita */
+    align-items: center;
+    padding: 0 20px;
+  }
 /* Logo no desktop */
 .site-title {
   font-weight: 400; /* mais leve */
@@ -563,12 +569,15 @@ footer,
   line-height: 1.0;
 }
 
-  /* Ícones de redes próximos e alinhados à direita */
-  .social-links {
+  .social-icons {
     display: flex;
-    justify-content: flex-end; /* mantém à direita */
-    gap: 4px;
+    gap: 0.3rem; /* ícones próximos */
+    order: 2;
+  }
 
+  .menu-toggle {
+    display: flex;
+    order: 3;
   }
 }
 
