@@ -558,18 +558,16 @@ footer,
 
 /* Logo no desktop */
 .site-title {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 350; /* mais leve */
+  font-weight: 400; /* mais leve */
   font-size: 1.8rem; /* maior que os ícones */
   line-height: 1.0;
-  padding-left: 1.5rem;
 }
 
   /* Ícones de redes próximos e alinhados à direita */
   .social-links {
     display: flex;
     justify-content: flex-end; /* mantém à direita */
-    padding: 1rem;
+    gap: 4px;
 
   }
 }
