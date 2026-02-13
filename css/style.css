@@ -12,6 +12,7 @@ body {
   color: #111;
   line-height: 1.6;
   overflow-x: hidden;
+  text-shadow: none;
 }
 
 img {
@@ -108,7 +109,7 @@ img {
 
 .page-bike-aro-29 .cover,
 .page-seo-tecnico .cover {
-  width: 100vw;
+  width: 100%;
   max-height: 300px;
   height: auto;
   object-fit: cover;
@@ -517,6 +518,31 @@ article h2:first-of-type {
   z-index: 3;
 }
 
+.cover-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.cover-container .cover {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover-container .cover-credit {
+  position: absolute;
+  bottom: 0px;
+  right: 1px;
+  font-size: 0.60rem;
+  color: #fff; /* branco para sobreposição */
+  background: rgba(0,0,0,0.4); /* fundo leve para contraste */
+  padding: 2px 6px;
+  border-radius: 0px;
+}
+
+
+
 .imagem-analise {
   max-width: 100%;
   width: 100%;
@@ -546,12 +572,39 @@ footer,
   margin-top: 60px;
 }
 
+/* 1️⃣ Ajustes responsivos para telas até 768px */
 @media (max-width: 768px) {
+  /* Grid dos temas */
   .temas-grid {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
+
+  /* Logo menor no mobile */
+  .site-title {
+    font-size: 1.4rem; /* menor logo em telas pequenas */
+    font-weight: 600;  /* mantém destaque sem contorno */
+    text-shadow: none; /* remove contorno, se houver */
+  }
+
+  /* Ícones de redes próximos e alinhados à direita */
+  .social-links {
+    display: flex;
+    justify-content: flex-end; /* mantém à direita */
+    gap: 8px; /* espaçamento uniforme entre os ícones */
+  }
 }
+
+/* 2️⃣ Ajuste de espaçamento entre header e primeiro card */
+.hero + main {
+  margin-top: 15px; /* reduz espaço entre header e conteúdo */
+}
+
+/* 3️⃣ Tipografia sem contorno */
+body, h1, h2, h3, h4, h5, h6, p, li {
+  text-shadow: none; /* remove qualquer contorno existente */
+}
+
 
 /* Estilo geral das tabelas do artigo */
 article table {
@@ -582,21 +635,25 @@ article table tbody tr:nth-child(even) {
 }
 
 /* Responsividade: permite scroll horizontal em telas pequenas */
+/* Logo no desktop */
+.branding .site-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400; /* mais leve */
+  font-size: 1.8rem; /* desktop */
+}
+
+/* Ajuste da logo no mobile */
 @media (max-width: 768px) {
+  .branding .site-title {
+    font-size: 2.4rem; /* aumenta no mobile */
+  }
+  
   article table {
     display: block;
     overflow-x: auto;
   }
 }
 
-
-.sobre-ola {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 1px;
-  text-align: left;
-}
 
 .sobre-container {
   max-width: 700px;
@@ -648,13 +705,6 @@ article table tbody tr:nth-child(even) {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* Escala tipográfica refinada */
-.page-bike-aro-29 .page-bike-aro-29 h1 {
-  font-size: 1.8rem;   /* menor que o padrão, mas ainda em destaque */
-  font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .page-bike-aro-29 h2 {
